@@ -1,0 +1,272 @@
+{
+  "users": [
+    { "id": 1, "name": "Mariam", "email": "mariam@example.com", "role": "user", "password": "pass123" },
+    { "id": 2, "name": "Admin", "email": "admin@example.com", "role": "admin", "password": "admin123" },
+    { "id": 3, "name": "Omar", "email": "omar@example.com", "role": "user", "password": "omar123" }
+  ],
+
+  "categories": [
+    { "id": 1, "name": "Dogs" },
+    { "id": 2, "name": "Cats" },
+    { "id": 3, "name": "Birds" },
+    { "id": 4, "name": "Accessories" }
+  ],
+
+  "products": [
+    {
+       "id": 1,
+    "name": "Dog Food Premium",
+    "price": 25.99,
+    "shortDesc": "High-protein dry dog food.",
+    "image": "https://images.unsplash.com/photo-1619983081563-430f63602796",
+    "categoryId": 1,
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "name": "Cat Toy Ball",
+    "price": 9.5,
+    "shortDesc": "Interactive rolling cat toy.",
+    "image": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6",
+    "categoryId": 2,
+    "rating": 4.0
+  },
+  {
+    "id": 3,
+    "name": "Bird Cage",
+    "price": 40.0,
+    "shortDesc": "Spacious and comfortable bird cage.",
+    "image": "https://images.unsplash.com/photo-1616763355542-2d34c87a4825",
+    "categoryId": 3,
+    "rating": 4.3
+  },
+  {
+    "id": 4,
+    "name": "Leash Set",
+    "price": 12.0,
+    "shortDesc": "Strong and durable leash for dogs.",
+    "image": "https://images.unsplash.com/photo-1623642888149-c1f9cfc90b5c",
+    "categoryId": 4,
+    "rating": 4.7
+  },
+  {
+    "id": 5,
+    "name": "Cat Bed",
+    "price": 18.99,
+    "shortDesc": "Soft and cozy bed for cats.",
+    "image": "https://images.unsplash.com/photo-1606214174585-fe31582dc6ee",
+    "categoryId": 2,
+    "rating": 4.8
+  },
+  {
+    "id": 6,
+    "name": "Dog Shampoo",
+    "price": 15.5,
+    "shortDesc": "Gentle shampoo for all dog breeds.",
+    "image": "https://images.unsplash.com/photo-1612898616066-450e12d1bdfa",
+    "categoryId": 1,
+    "rating": 4.6
+  },
+    {
+  "products": [
+    {
+      "id": 7,
+      "name": "Dog Collar",
+      "price": 10.99,
+      "shortDesc": "Adjustable nylon collar for dogs.",
+      "image": "https://images.unsplash.com/photo-1583511655914-7fdc8d2b2b1f",
+      "categoryId": 4,
+      "rating": 4.4
+    },
+    {
+      "id": 8,
+      "name": "Cat Scratching Post",
+      "price": 29.99,
+      "shortDesc": "Durable scratching post with base.",
+      "image": "https://images.unsplash.com/photo-1574158622682-e40e69881006",
+      "categoryId": 2,
+      "rating": 4.7
+    },
+    {
+      "id": 9,
+      "name": "Dog Treats Pack",
+      "price": 8.99,
+      "shortDesc": "Healthy chewy treats for dogs.",
+      "image": "https://images.unsplash.com/photo-1596495577886-d920f1fb7238",
+      "categoryId": 1,
+      "rating": 4.6
+    },
+    {
+      "id": 10,
+      "name": "Cat Litter Box",
+      "price": 22.99,
+      "shortDesc": "Easy-clean litter box with lid.",
+      "image": "https://images.unsplash.com/photo-1625595238097-d36b7f7dbf28",
+      "categoryId": 2,
+      "rating": 4.3
+    },
+    {
+      "id": 11,
+      "name": "Bird Feeder",
+      "price": 18.0,
+      "shortDesc": "Outdoor hanging feeder for small birds.",
+      "image": "https://images.unsplash.com/photo-1501706362039-c6e80948a9d3",
+      "categoryId": 3,
+      "rating": 4.5
+    },
+    {
+      "id": 12,
+      "name": "Pet Water Fountain",
+      "price": 34.5,
+      "shortDesc": "Automatic water dispenser for pets.",
+      "image": "https://images.unsplash.com/photo-1601758123927-1987fbb9f23d",
+      "categoryId": 4,
+      "rating": 4.8
+    },
+    {
+      "id": 13,
+      "name": "Dog Sweater",
+      "price": 19.99,
+      "shortDesc": "Cozy winter sweater for dogs.",
+      "image": "https://images.unsplash.com/photo-1601758125946-6ec2c0a6c92a",
+      "categoryId": 1,
+      "rating": 4.7
+    },
+    {
+      "id": 14,
+      "name": "Cat Carrier Bag",
+      "price": 27.99,
+      "shortDesc": "Portable carrier for cats and small pets.",
+      "image": "https://images.unsplash.com/photo-1601758260529-0c8f08e44a6a",
+      "categoryId": 2,
+      "rating": 4.6
+    },
+    {
+      "id": 15,
+      "name": "Dog Bed Deluxe",
+      "price": 39.99,
+      "shortDesc": "Soft orthopedic bed for dogs.",
+      "image": "https://images.unsplash.com/photo-1574158622682-e40e69881006",
+      "categoryId": 1,
+      "rating": 4.9
+    },
+    {
+      "id": 16,
+      "name": "Bird Toys Set",
+      "price": 14.99,
+      "shortDesc": "Colorful toys to keep birds active.",
+      "image": "https://images.unsplash.com/photo-1501706362039-c6e80948a9d3",
+      "categoryId": 3,
+      "rating": 4.2
+    },
+    {
+      "id": 17,
+      "name": "Pet Grooming Kit",
+      "price": 24.99,
+      "shortDesc": "Complete set for pet grooming.",
+      "image": "https://images.unsplash.com/photo-1601758174507-7fb5b3aab6b0",
+      "categoryId": 4,
+      "rating": 4.5
+    },
+    {
+      "id": 18,
+      "name": "Cat Food Bowl",
+      "price": 9.49,
+      "shortDesc": "Non-slip stainless steel bowl for cats.",
+      "image": "https://images.unsplash.com/photo-1583337130417-3346a1eeadc8",
+      "categoryId": 2,
+      "rating": 4.4
+    },
+    {
+      "id": 19,
+      "name": "Dog Raincoat",
+      "price": 17.99,
+      "shortDesc": "Waterproof coat for rainy walks.",
+      "image": "https://images.unsplash.com/photo-1601758003122-78e7ebff3e6d",
+      "categoryId": 1,
+      "rating": 4.6
+    },
+    {
+      "id": 20,
+      "name": "Bird Perch Stand",
+      "price": 20.99,
+      "shortDesc": "Wooden perch stand for parrots.",
+      "image": "https://images.unsplash.com/photo-1574169208507-84376144848b",
+      "categoryId": 3,
+      "rating": 4.1
+    },
+    {
+      "id": 21,
+      "name": "Pet Travel Bag",
+      "price": 32.5,
+      "shortDesc": "Spacious travel bag for pets.",
+      "image": "https://images.unsplash.com/photo-1619983081563-430f636b0b97",
+      "categoryId": 4,
+      "rating": 4.7
+    },
+    {
+      "id": 22,
+      "name": "Cat Blanket",
+      "price": 12.99,
+      "shortDesc": "Soft fleece blanket for cats.",
+      "image": "https://images.unsplash.com/photo-1601758126071-5a012a51c3b6",
+      "categoryId": 2,
+      "rating": 4.8
+    }
+  ]
+}
+
+  ],
+
+  "reviews": [
+    {
+      "id": 1,
+      "productId": 1,
+      "userId": 1,
+      "rating": 5,
+      "comment": "My dog loves this food! Great quality.",
+      "createdAt": "2025-10-01T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "productId": 2,
+      "userId": 3,
+      "rating": 4,
+      "comment": "Nice toy, keeps my cat busy.",
+      "createdAt": "2025-10-05T09:30:00Z"
+    },
+    {
+      "id": 3,
+      "productId": 4,
+      "userId": 1,
+      "rating": 5,
+      "comment": "Very strong leash, highly recommended.",
+      "createdAt": "2025-10-10T15:45:00Z"
+    }
+  ],
+
+  "favorites": [
+    { "id": 1, "userId": 1, "productId": 1 },
+    { "id": 2, "userId": 1, "productId": 4 },
+    { "id": 3, "userId": 3, "productId": 2 }
+  ],
+
+  "cart": [
+    { "id": 1, "userId": 1, "productId": 2, "quantity": 1 },
+    { "id": 2, "userId": 1, "productId": 1, "quantity": 2 }
+  ],
+
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "items": [
+        { "productId": 1, "quantity": 2, "price": 25.99 },
+        { "productId": 2, "quantity": 1, "price": 9.5 }
+      ],
+      "total": 61.48,
+      "paymentStatus": "paid",
+      "createdAt": "2025-10-12T18:00:00Z"
+    }
+  ]
+}
