@@ -30,6 +30,7 @@
     "@angular/router": "^20.3.0",
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@popperjs/core": "^2.11.8",
+    "lucide-angular": "^0.546.0",
     "rxjs": "~7.8.0",
     "tailwind": "^4.0.0",
     "tslib": "^2.3.0",
