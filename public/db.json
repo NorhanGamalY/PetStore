@@ -15,7 +15,6 @@
     { "id": 3, "name": "Birds" },
     { "id": 4, "name": "Accessories" },
     { "id": 5, "name": "Fish" },
-    { "id": 6, "name": "Reptiles" },
     { "id": 7, "name": "Toys" },
     { "id": 8, "name": "Grooming" },
     { "id": 9, "name": "Pet Food" },
@@ -49,7 +48,7 @@
       "name": "Bird Cage",
       "price": 40.0,
       "shortDesc": "Spacious and comfortable bird cage.",
-      "image": "https://images.unsplash.com/photo-1624996379697-f01b9c9d8a1c",
+      "image": "https://images.unsplash.com/photo-1571714998946-c3d3f83c8f1f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEJpcmRzJTIwZm9yJTIwcGV0JTIwc3RvcmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
       "categoryId": 3,
       "rating": 4.3
     },
@@ -58,7 +57,7 @@
       "name": "Leash Set",
       "price": 12.0,
       "shortDesc": "Strong and durable leash for dogs.",
-      "image": "https://images.unsplash.com/photo-1601758126042-8f60d9d6b40b",
+      "image": "https://images.unsplash.com/photo-1592028604480-6e7938872f57?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBldHMlMjBBY2Nlc3Nvcmllc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
       "categoryId": 4,
       "rating": 4.7
     },
@@ -67,7 +66,7 @@
       "name": "Aquarium Starter Kit",
       "price": 55.99,
       "shortDesc": "Complete fish tank starter kit.",
-      "image": "https://images.unsplash.com/photo-1518837695005-2083093ee35b",
+      "image": "https://media.istockphoto.com/id/585616148/photo/goldfish-in-aquarium-with-green-plants.webp?a=1&b=1&s=612x612&w=0&k=20&c=bFrXVzyvrv4YogCK_Y6ToCYDYNBolwAHYFdqnl5krP0=",
       "categoryId": 5,
       "rating": 4.8
     },
@@ -85,8 +84,7 @@
       "name": "Dog Squeaky Toy",
       "price": 8.99,
       "shortDesc": "Durable toy for active dogs.",
-      "image": "https://images.unsplash.com/photo-1574158622682-e40e69881006",
-      "categoryId": 7,
+       "image" : "https://images.unsplash.com/photo-1549297161-14f79605a74c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGV0JTIwdG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" ,    "categoryId": 7,
       "rating": 4.6
     },
     {
@@ -103,7 +101,7 @@
       "name": "Organic Cat Food",
       "price": 19.99,
       "shortDesc": "Healthy organic food for cats.",
-      "image": "https://images.unsplash.com/photo-1601758123927-1987fbb9f23d",
+      "image": "https://images.unsplash.com/photo-1598134493179-51332e56807f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBldCUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
       "categoryId": 9,
       "rating": 4.9
     },
@@ -112,7 +110,7 @@
       "name": "Pet Vitamins Pack",
       "price": 29.99,
       "shortDesc": "Daily vitamins for your pet’s health.",
-      "image": "https://images.unsplash.com/photo-1583336663277-620dc1996585",
+      "image": "https://plus.unsplash.com/premium_photo-1661910502563-79ae863a9467?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGV0JTIwaGVhbHRoJTIwY2FyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
       "categoryId": 10,
       "rating": 4.5
     },
