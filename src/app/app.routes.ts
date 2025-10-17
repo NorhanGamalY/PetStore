@@ -10,6 +10,7 @@ import { Cart } from './cart/cart';
 import { Favorites } from './favorites/favorites';
 
 
+
 export const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full',  title:'Home'},
   {path:'home', component: Home, title:'Home'},
