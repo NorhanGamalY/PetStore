@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoryService } from '../../services/category.service'; // ✅ هنا التصحيح
+import { CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'app-categories',
@@ -14,7 +14,7 @@ export class CategoriesComponent implements OnInit {
   visibleCount = 4;
   loading = true;
 
-  constructor(private categoryService: CategoryService) {} // ✅ هنا بيستقبل السيرفيس
+  constructor(private categoryService: CategoryService) {}
 
   ngOnInit(): void {
     this.categoryService.getCategories().subscribe({
