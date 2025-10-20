@@ -16,7 +16,7 @@ export class CategoryService {
   constructor(private http: HttpClient) {}
 
   getCategories(): Observable<Category[]> {
-    return this.http.get<any>('assets/db.json').pipe( // ✅ خلي المسار assets/
+    return this.http.get<any>('assets/db.json').pipe(
       map((data) => {
         const db = data;
         const products = db.products || [];
