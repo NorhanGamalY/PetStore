@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LucideAngularModule, Facebook, Instagram, Twitter } from 'lucide-angular';
+import {
+  LucideAngularModule,
+  FacebookIcon,
+  InstagramIcon,
+  TwitterIcon,
+  MapPinIcon,
+  PhoneIcon,
+  MailIcon,
+} from 'lucide-angular';
 
 @Component({
   selector: 'app-footer',
@@ -10,5 +18,13 @@ import { LucideAngularModule, Facebook, Instagram, Twitter } from 'lucide-angula
 })
 export class Footer {
   currentYear = new Date().getFullYear();
-  icons = { Facebook, Instagram, Twitter };
+
+  icons = {
+    Facebook: FacebookIcon,
+    Instagram: InstagramIcon,
+    Twitter: TwitterIcon,
+    Location: MapPinIcon,
+    Phone: PhoneIcon,
+    Mail: MailIcon,
+  };
 }
