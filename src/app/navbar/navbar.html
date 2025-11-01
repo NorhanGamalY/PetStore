@@ -3,30 +3,30 @@
     class="container mx-auto bg-amber-200 rounded-3xl py-2 px-4 my-5 flex justify-evenly items-center"
   >
     <div class="w-1/6 text-center">
-      <a class="nav-link text-xl" routerLinkActive="bg-danger-subtle rounded-2" routerLink="/home"
+      <a class="nav-link text-xl" routerLink="/home"
         ><span class="me-2"></span>🐾Paw Planet</a
       >
     </div>
     <ul class="flex justify-evenly w-2/6 items-center">
       <li>
-        <a routerLink="/home" routerLinkActive="active-link" class="font-medium transition">Home</a>
+        <a routerLink="/home" routerLinkActive="active-link" class="font-medium transition cursor-pointer">Home</a>
       </li>
       <li>
-        <a routerLink="/shop" routerLinkActive="active-link" class="font-medium transition">Shop</a>
+        <a routerLink="/shop" routerLinkActive="active-link" class="font-medium transition cursor-pointer">Shop</a>
       </li>
       <li>
-        <a routerLink="/about" routerLinkActive="active-link" class="font-medium transition"
+        <a routerLink="/about" routerLinkActive="active-link" class="font-medium transition cursor-pointer"
           >About Us</a
         >
       </li>
       <li>
-        <a routerLink="/contacts" routerLinkActive="active-link" class="font-medium transition"
+        <a routerLink="/contacts" routerLinkActive="active-link" class="font-medium transition cursor-pointer"
           >Contact Us</a
         >
       </li>
     </ul>
 
-    <div class="flex justify-evenly items-center w-2/6">
+    <div class="flex justify-evenly items-center w-2/6 gap-3">
       <div class="relative w-64">
         <input
           type="text"
@@ -49,8 +49,9 @@
         </svg>
       </div>
 
+      @if (isLoggedIn()) {
       <div class="relative group">
-        <a class="nav-link" routerLinkActive="active-link" routerLink="/favorites">
+        <a class="nav-link cursor-pointer" routerLink="/favorites">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -68,16 +69,18 @@
         </a>
 
         @if (favoritesCount > 0) {
-          <span
-            class="absolute -top-1 -right-2 bg-amber-600 text-white text-xs font-semibold rounded-full w-4 h-4 flex items-center justify-center group-hover:bg-amber-900 transition"
-          >
-            {{ favoritesCount }}
-          </span>
+        <span
+          class="absolute -top-1 -right-2 bg-amber-600 text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center group-hover:bg-amber-900 transition"
+        >
+          {{ favoritesCount }}
+        </span>
         }
       </div>
+      }
 
+      @if (isLoggedIn()) {
       <div class="relative group">
-        <a class="nav-link" routerLinkActive="bg-danger-subtle rounded-2" routerLink="/cart">
+        <a class="nav-link cursor-pointer" routerLink="/cart">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -95,17 +98,91 @@
         </a>
 
         <span
-          class="absolute -top-1 -right-2 bg-amber-600 text-white text-xs font-semibold rounded-full w-4 h-4 flex items-center group-hover:bg-amber-900 justify-center"
+          class="absolute -top-1 -right-2 bg-amber-600 text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center group-hover:bg-amber-900 justify-center transition"
         >
           3
         </span>
       </div>
-         <a routerLink="/login" routerLinkActive="active-link" class="font-medium transition"
-          >Login</a
+      }
+
+      @if (!isLoggedIn()) {
+      <a
+        routerLink="/login"
+        routerLinkActive="active-link"
+        class="font-medium transition hover:text-amber-700 cursor-pointer"
+        >Login</a
+      >
+      }
+
+      @if (isLoggedIn()) {
+      <div class="relative" clickOutside (clickOutside)="closeDropdown()">
+        <button
+          (click)="toggleDropdown()"
+          class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center hover:bg-amber-700 transition focus:outline-none focus:ring-2 focus:ring-amber-500"
+          [title]="getUserName()"
         >
-       <a routerLink="/dashboard" routerLinkActive="active-link" class="font-medium transition"
-          >Dashboard</a
+          {{ getInitials() }}
+        </button>
+
+        @if (isDropdownOpen) {
+        <div
+          class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-1 z-50 border border-gray-200"
         >
+          <div class="px-4 py-3 border-b border-gray-200">
+            <p class="text-sm font-semibold text-gray-800 truncate">
+              {{ getUserName() }}
+            </p>
+            <p class="text-xs text-gray-500 truncate">{{ getUserEmail() }}</p>
+          </div>
+          
+          @if (isAdmin()) {
+          <a
+            routerLink="/dashboard"
+            (click)="closeDropdown()"
+            class="w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-amber-50 transition flex items-center gap-2 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
+              />
+            </svg>
+            Dashboard
+          </a>
+          }
+
+          <button
+            (click)="logout()"
+            class="w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-amber-50 transition flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
+              />
+            </svg>
+            Logout
+          </button>
+        </div>
+        }
+      </div>
+      }
     </div>
   </div>
 </div>
