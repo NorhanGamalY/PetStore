@@ -33,23 +33,21 @@ export const routes: Routes = [
   },
   { path: 'dashboard', component: dashboard, title: 'Dashboard', canActivate: [adminGuard] },
   {
-  path: 'thank-you',
-  loadComponent: () => import('./feedback/feedback').then(m => m.FeedbackComponent)
+    path: 'thank-you',
+    loadComponent: () => import('./feedback/feedback').then(m => m.FeedbackComponent)
   },
   {
     path: 'test-feedback',
     loadComponent: () => import('./feedback/feedback').then(m => m.FeedbackComponent)
   },
   {
-  path: 'category/:id',
-  loadComponent: () => import('./category-list/category-list').then(m => m.CategoryListComponent)
+    path: 'category/:id',
+    loadComponent: () => import('./category-list/category-list').then(m => m.CategoryListComponent)
   },
-{
-  path: 'product/:id',
-  loadComponent: () => import('./product-details/product-details').then(m => m.ProductDetails),
-  title: 'Product Details'
-},
-
-
+  {
+    path: 'product/:id',
+    loadComponent: () => import('./product-details/product-details').then(m => m.ProductDetails),
+    title: 'Product Details'
+  },
   { path: '**', component: NotFound, title: 'Not Found' },
 ];

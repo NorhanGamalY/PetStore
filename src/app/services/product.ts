@@ -6,10 +6,10 @@ import { Observable, catchError, of } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:3000';
 
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/products`).pipe(
@@ -37,14 +37,14 @@ private apiUrl = 'http://localhost:3000';
       })
     );
   }
-getProductsByPet(petId: number): Observable<any[]> {
-  return this.http.get<any[]>(`${this.apiUrl}/products?petId=${petId}`).pipe(
-    catchError(error => {
-      console.error('Error fetching products by pet:', error);
-      return of([]);
-    })
-  );
-}
+  getProductsByPet(petId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/products?petId=${petId}`).pipe(
+      catchError(error => {
+        console.error('Error fetching products by pet:', error);
+        return of([]);
+      })
+    );
+  }
 
   getPets(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/pets`).pipe(
@@ -56,15 +56,11 @@ getProductsByPet(petId: number): Observable<any[]> {
   }
 
   getProductById(id: number): Observable<any> {
-  return this.http.get<any>(`${this.apiUrl}/products/${id}`).pipe(
-    catchError(error => {
-      console.error('Error fetching product:', error);
-      return of(null);
-    })
-  );
-}
-
-
-
-
+    return this.http.get<any>(`${this.apiUrl}/products/${id}`).pipe(
+      catchError(error => {
+        console.error('Error fetching product:', error);
+        return of(null);
+      })
+    );
+  }
 }

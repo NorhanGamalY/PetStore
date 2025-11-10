@@ -12,6 +12,7 @@ export class AuthService {
   private role: string = 'user';
 
   constructor() {
+    // watch auth state
     onAuthStateChanged(this.auth, async user => {
       console.log(user, "onAuthStateChanged");
 
@@ -32,6 +33,7 @@ export class AuthService {
         // Important: Clear user when logged out
         this.user.set(null);
         console.log('User cleared in service');
+
       }
     });
   }
@@ -40,7 +42,7 @@ export class AuthService {
     return new Promise(resolve => onAuthStateChanged(this.auth, user => resolve(user)));
   }
 
-  mapError(errCode: string) : string {
+  mapError(errCode: string): string {
     switch (errCode) {
       case 'auth/email-already-in-use': return 'This email is already registered.';
       case 'auth/invalid-email': return 'Invalid email address.';
@@ -57,6 +59,9 @@ export class AuthService {
 
       await updateProfile(res.user, { displayName: fullName });
 
+      // this.user.set(res.user);
+
+
       if (res.user.email) {
         const isAdmin = this.adminEmails.includes(res.user.email);
         if (isAdmin) this.role = 'admin';
@@ -71,9 +76,8 @@ export class AuthService {
       });
 
       // Update user with role
-      (res.user as any).role = this.role;
+      // (res.user as any).role = this.role;
       this.user.set(res.user);
-
       return res;
     }
     catch (err: any) {
@@ -87,6 +91,7 @@ export class AuthService {
     try {
       const res = await signInWithEmailAndPassword(this.auth, email, password);
       console.log(res, "success login");
+      this.user.set(res.user);
       return res;
     }
     catch (err: any) {
@@ -120,7 +125,7 @@ export class AuthService {
           provider: 'google'
         });
       }
-
+      this.user.set(res.user);
       return res;
     }
     catch (err: any) {
@@ -154,6 +159,7 @@ export class AuthService {
           provider: 'facebook'
         });
       }
+      this.user.set(res.user);
 
       return res;
     }
@@ -188,6 +194,7 @@ export class AuthService {
           provider: 'facebook'
         });
       }
+      this.user.set(res.user);
 
       return res.user;
     }
@@ -212,7 +219,7 @@ export class AuthService {
   async logout() {
     try {
       await signOut(this.auth);
-      this.role = 'user'; 
+      this.role = 'user';
       console.log('Logged out successfully');
       return true;
     }
@@ -222,5 +229,5 @@ export class AuthService {
       return false;
     }
   }
-
 }
+

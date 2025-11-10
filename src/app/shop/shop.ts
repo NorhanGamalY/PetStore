@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-// import { Hero } from '../home/hero/hero';
-// import { Footer } from '../footer/footer';
-// import { ShopByPet } from '../home/shop-by-pet/shop-by-pet';
 import { Filter } from './filter/filter';
 import { ProductCard } from './product-card/product-card';
 import { CommonModule } from '@angular/common';
@@ -106,14 +103,14 @@ export class Shop {
   }
 
 
- 
-  
+
+
   /** Sorting methods */
   onSortChange(sortType: string) {
     this.sortBy = sortType;
     this.applySorting();
   }
-  
+
   applySorting() {
     switch (this.sortBy) {
       case 'price-low-high':
@@ -178,6 +175,4 @@ export class Shop {
     }
     return pages;
   }
-
-
 }

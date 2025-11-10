@@ -3,7 +3,7 @@
     class="container mx-auto bg-amber-200 rounded-3xl py-2 px-4 my-5 flex justify-evenly items-center"
   >
     <div class="w-1/6 text-center">
-      <a class="nav-link text-xl" routerLink="/home"
+      <a class="nav-link text-xl" routerLinkActive="bg-danger-subtle rounded-2" routerLink="/home"
         ><span class="me-2"></span>🐾Paw Planet</a
       >
     </div>
@@ -134,7 +134,7 @@
             </p>
             <p class="text-xs text-gray-500 truncate">{{ getUserEmail() }}</p>
           </div>
-          
+
           @if (isAdmin()) {
           <a
             routerLink="/dashboard"
